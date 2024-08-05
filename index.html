@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">        
+        <style>
+          .montserrat-alternates-regular {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+          .montserrat-alternates-semibold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+          }
+
+          .montserrat-alternates-bold {
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+          }
+         
+
+          .josefin-slab {
+            font-family: "Josefin Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+          }
+          .playfair-display {
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-style: normal;
+          }     
+
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+          }
+          .background{
+            /* background: url(images/background.png) no-repeat center / cover; */
+            height: 902px;
+            position: relative;
+            width: 100%;
+            /* background:url(images/design.png) no-repeat; */
+          }
+         
+          .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+            --bs-gutter-x: 0 !important;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x)* .5);
+             padding-left: calc(var(--bs-gutter-x)* .5);
+             margin-right: auto;
+            margin-left: auto;
+          }
+          .navbar {
+                --bs-navbar-padding-x: 0;
+                --bs-navbar-padding-y: 0.5rem;
+                --bs-navbar-color: white !important;
+                --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+                --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+                --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+                --bs-navbar-brand-padding-y: 0.3125rem;
+                --bs-navbar-brand-margin-end: 1rem;
+                --bs-navbar-brand-font-size: 1.25rem;
+                --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+                --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+                --bs-navbar-nav-link-padding-x: 0.5rem;
+                --bs-navbar-toggler-padding-y: 0.25rem;
+                --bs-navbar-toggler-padding-x: 0.75rem;
+                --bs-navbar-toggler-font-size: 1.25rem;
+                --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+                --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+                --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+                --bs-navbar-toggler-focus-width: 0.25rem;
+                --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+            }
+            .order{
+              background:url(images/background1.png) no-repeat center / cover;
+              height: 265px;
+            }
+            .order p:nth-child(1){
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 900;
+              font-style: normal;
+              font-size: 50px;
+            }
+            .order p:nth-child(2){
+              font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+
+            }
+            .order2{
+              background: url(images/background2.png) no-repeat center / cover;
+              height: 1008px;
+            }
+            .Product p:nth-child(1){
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-size: 58px;
+              color:#484a4b ;
+              padding: 149px 0 0 0;
+            }
+            .Product{
+
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+
+            }
+            .row>* {
+                flex-shrink: 0;
+                width: 100%;
+                max-width: 100%;
+                padding-right: calc(var(--bs-gutter-x)* 0) !important;
+                padding-left: calc(var(--bs-gutter-x)* 0) !important;
+                margin-top: var(--bs-gutter-y);
+            }
+            .card {
+                --bs-card-spacer-y: 1rem;
+                --bs-card-spacer-x: 1rem;
+                --bs-card-title-spacer-y: 0.5rem;
+                --bs-card-title-color: ;
+                --bs-card-subtitle-color: ;
+                --bs-card-border-width: var(--bs-border-width);
+                --bs-card-border-color: var(--bs-border-color-translucent);
+                --bs-card-border-radius: var(--bs-border-radius);
+                --bs-card-box-shadow: ;
+                --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+                --bs-card-cap-padding-y: 0.5rem;
+                --bs-card-cap-padding-x: 1rem;
+                --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+                --bs-card-cap-color: ;
+                --bs-card-height: ;
+                --bs-card-color: ;
+                --bs-card-bg: var(--bs-body-bg);
+                --bs-card-img-overlay-padding: 1rem;
+                --bs-card-group-margin: 0.75rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                height: var(--bs-card-height);
+                color: var(--bs-body-color);
+                word-wrap: break-word;
+                background-color: var(--bs-card-bg);
+                background-clip: border-box;
+                border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+                border-radius: var(--bs-card-border-radius);
+                background: #e6e3da;
+            }
+
+            .card-body p:nth-child(1){
+              color: #fff !important;
+
+            }
+            .video {
+              background: url(images/background3.png) no-repeat center / cover ;
+              height: 1106px;
+              
+
+              width: 100%;
+              height: 1106px;
+            }
+            .video-text {
+              text-align: center;
+              padding: 50px 0;
+            }
+            .video-text p:nth-child(1){
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-style: normal;
+              font-size: 58px;
+              color:#484a4b ;
+            }
+            .video-text p:nth-child(2){
+            font-family: "Montserrat Alternates", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            color:#765a33; ;
+            }
+            .background4{
+              background: url(images/background4.png) no-repeat center / cover;
+              height: 393px;
+            }
+            .button{
+              font-family: "Playfair Display", serif;
+              padding: 12px 30px;
+              font-size: 26px;
+              background: #424242;
+              border-radius: 50px;
+            }
+            .offer  div:nth-child(2) p:nth-child(1){
+              font-size: 168px;
+              font-weight: bold;
+              font-family: "Montserrat Alternates", sans-serif;
+              color: #424242;
+            }
+            .offer  div:nth-child(3) p:nth-child(1){
+              color: #424242;
+              font-size: 29px;
+              font-family: "Montserrat Alternates", sans-serif;
+              font-weight: 600;
+            }
+           
+            /* .fixed-top {
+              position: fixed !important;
+              top: 0;
+              right: 0;
+              left: 0;
+              z-index: 1030;
+            } */
+            .background6{
+              background: url(images/background6.png) no-repeat center / cover;
+              height: 987px;
+              width: 100%;
+              align-items: center;
+              
+            }
+            .background5{
+              background: url(images/background5.png) no-repeat center /cover;
+              height: 1001px;
+              width: 100%;
+
+            }
+            .offer2 p:nth-child(1){
+              color: #484a4b;
+              font-size: 58px;
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-style: normal;
+            }
+            .offer2 p:nth-child(2){
+              color: #765a33;
+              font-size: 25px;
+              font-family: "Josefin Slab", serif;
+              font-optical-sizing: auto;
+              font-weight: 400;
+              font-style: normal;
+            }
+            .offer3 p:nth-child(1){
+              color: #484a4b;
+              font-size: 58px;
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-style: normal;
+
+            }
+            .offer3 p:nth-child(2){
+              color: #765a33;
+              font-size: 25px;
+              font-family: "Josefin Slab", serif;
+              font-optical-sizing: auto;
+              font-weight: 400;
+              font-style: normal;
+            }
+            .background7{
+                background: url(images/background7.png) no-repeat center / cover;
+                height: 929px;
+                display: flex;
+                align-items: center;
+            }
+            .background8{
+              background: url(images/background8.png) no-repeat center / cover;
+              height: 751px;
+            }
+            .form-control{
+              background: #efefef;
+              color: #bdbdbd;
+              font-size: 18px;
+              border:1px solid #b0b0b0;
+              border-radius: 0%;
+            }
+            textarea {
+            resize: initial;
+            }
+            .form p:nth-child(1){
+              color: #484a4b;
+              font-size: 58px;
+              font-family: "Playfair Display", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+
+
+            }
+            .form p:nth-child(2){
+              color: #484a4b;
+              font-size: 25px;
+              font-family: "Josefin Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            margin-top: 28px;
+            }
+            .submit{
+              padding: 15px 0;
+            }
+            .background9{
+              height: 654px;
+              background: #424242;
+            }
+            .background9 > div:nth-child(1) p:nth-child(1){
+              font-family: "Montserrat Alternates", sans-serif;
+              font-weight: bold;
+              color: white;
+            }
+            .background9 ul{
+              list-style: none;
+
+    cursor: pointer;
+            }
+            ol, ul {
+    padding-left: 0 !important;
+    color: white;
+}
+ol, ul li:hover{
+    padding-left: 0 !important;
+    color: red;
+    text-decoration: underline;
+}
+.foot {
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 160px 0 !important;
+}
+
+            @media (max-width: 768px) {
+              .body{
+                height: 1100px;
+              }
+              .rp{
+                height: auto;
+        width: 100% !important;
+        padding: 73px 0;
+        height: auto !important;
+              }
+              .grid-container{		
+                  display:grid;
+                  grid-template-areas: 
+                    'header'
+                    'left'
+                    'middle'
+                    'right';		
+                  height:auto;
+                  margin:auto;
+                  width:100%;
+                }
+                .collapse {
+                    background: #484a4b;
+                    padding: 20px 0;
+                }
+                .left1{
+                  
+                  font-size: 80% !important;
+                 
+                  
+                 
+                }
+                .rp1{
+        
+
+                      width: 46%;
+        position: absolute !important;
+        bottom: 400px !important;
+        top: -130px;
+
+                  }
+                  .left1{
+                    font-size: 70% !important;
+        position: relative;
+        bottom: 169px;
+        right: 90px;
+                  }
+                  .l1{
+                    position: relative;
+        padding: 1px 5px;
+        font-size: 70% !important;
+        position: relative;
+        bottom: 190px;
+        right: 5pc;
+                  }
+                  .l2{
+                    margin: 10px 0 !important;
+                    
+                  }
+                  .l3{
+                    font-size: 80%;
+        position: relative;
+        bottom: 25px;
+    }
+    .order{
+      height: auto;
+      display: flex;
+      position: relative;
+        bottom: 600px;
+    }
+    .o1{
+      display: flow !important;
+        justify-content: space-around;
+        text-align: center !important;
+        color: white;
+        padding: 10px 0 10px 0 !important;
+    }
+    .order2{
+      position: relative;
+        bottom: 600px;
+        /* width: 100%; */
+        height: auto;
+    }
+    .row1{
+      display: flow !important;
+    }
+    .card {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+    background: #e6e3da;
+    margin: auto;
+    margin: 60px auto !important;
+}.display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+    display: none;
+}
+.video{
+  height: 300px;
+  width: auto;
+  font-size: 20%;
+
+    position: relative;
+    bottom: 60;
+    bottom: 600px;
+
+    }
+    .video-text  p{
+      font-size: 100%;
+      position: relative;
+      bottom: 38px;
+    }
+    .video div:nth-child(1) p:nth-child(1){
+      font-size: 500%;
+
+    }
+    .video div:nth-child(1) p:nth-child(2){
+      font-size: 500%;
+
+    }
+    .background4 {
+    background: url(images/background4.png) no-repeat center / cover;
+    height: 100px;
+    width: auto;
+    position:  relative !important;
+    bottom: 600px;
+}               
+.button{
+
+        font-size: 50%;
+        /* width: 50%; */
+        padding: 4px;
+        position: relative;
+        right: 80px;
+        bottom: 25px;
+
+}
+
+
+.offer div:nth-child(2) p:nth-child(1){
+  font-size: 50%;
+        position: relative !important;
+        margin: 70px 110px;
+        bottom: 30px;
+        right: 66px;
+}
+.offer div:nth-child(3) p:nth-child(1){
+  font-size: 50% !important;
+        position: relative !important;
+        /* margin: 290px 140px; */
+        bottom: 310px;
+        font-size: 50%;
+        right: 66px;
+    }
+    .background6 {
+      background: url(images/background6.png) no-repeat center / cover;
+    height: 280px;
+    width: auto;
+    align-items: center;
+    position: relative;
+    bottom: 600px;
+    }
+    .offer2 p:nth-child(1){
+      font-size: 150%;
+    }
+    .offer2 p:nth-child(2){
+      font-size: 50%;
+    }
+    .offer2 .button{
+      position: static;
+    }
+    .background5 {
+    background: url(images/background5.png) no-repeat center / cover;
+    height: 290px;
+    position: relative;
+    bottom: 600px
+}
+.offer3 {
+  margin: 0 0 30px 10px ;
+}
+.offer3 p:nth-child(1){
+  font-size: 150%;
+}
+.offer3 p:nth-child(2){
+  font-size: 55%;
+}
+.offer3 a{
+  position: static !important;
+}
+.background7 {
+height: 250px;
+    display: flex;
+    align-items: center;
+    position: relative !important;
+    bottom: 600px !important;
+}
+.background7 div:nth-child(2) {
+  margin:0 ;
+  margin-left: auto !important;
+}
+.background8{
+  position: relative !important;
+  bottom: 600px !important;
+
+}
+.form p:nth-child(1){
+  font-size: 270%;
+}
+.form p:nth-child(2){
+  font-size: 150%;
+}
+.mb-3{
+  margin: 15px !important;
+}
+.background8 {
+        position: relative !important;
+        bottom: 600px !important;
+        height: auto;
+    }
+    .background9 {
+    height: auto;
+    background: #424242;
+    /* height: auto; */
+    position: relative;
+    bottom: 620px;
+}
+.foot{
+  display: flow !important;
+  text-align: center;
+}
+.foot div:nth-child(2) p{
+  margin: 0 !important;
+}
+.foot div:nth-child(2) ul{
+  margin: 0 !important;
+}
+.foot div:nth-child(2) {
+  margin: 70px 0;
+}
+.nav-item{
+  list-style: none;
+    justify-content: space-around;
+    display: flex;
+}
+.navbar-nav ms-auto mb-2 mb-lg-0 w-50 fw-bold{
+  width: 100% !important;
+}
+            }
+
+
+        </style>
+    </head> 
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+             <div class="container-fluid ">
+              <div class="background ">
+               <img src="images/background.png "  alt="" style="position: absolute;height: 902px;"  class="rp w-100 col-12 ">
+                <img src="images/design.png" alt="" style="position: absolute;margin: 250px 0 0 0;background:  center / cover; "
+                class="rp1">
+            <nav class="navbar navbar-expand-lg  py-4 fixed-top"style="background-color: #c87e6b; height:99px; " class="w-100" id="navbar-example2">
+                <div class="container">
+                  <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 w-50 fw-bold"style="
+                    display: flex;
+                    justify-content: space-evenly;
+                    color: white !important;
+                    text-transform: uppercase;
+                ">
+                      <li class="nav-item">
+                        <a href="#home" class="nav-link active" aria-current="page" href="#scrollspyHeading1">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#service" class="nav-link " href="#scrollspyHeading2">Service</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#about" class="nav-link " href="#scrollspyHeading3">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#contect" class="nav-link " href="#scrollspyHeading4">Contact</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex w-25" role="search">
+                      
+                      <button class="btn btn-outline-light  fw-bold"style="
+                   
+                      border-radius: 20px !important;
+                   " type="submit">SIGN IN</button>
+                    </form>
+                    <li class="nav-item "style="list-style:none; ">
+                      <a class="navbar-brand " href="#"><img src="images/Sesion.png" alt=""></a>
+                      <a class="navbar-brand mx-4" href="#"><img src="images/Shop.png" alt=""></a>
+                      <a class="navbar-brand mx-2" href="#"><img src="images/Menu.png" alt=""></a>
+                  </li>
+                  </div>
+                </div>
+              </nav>
+              <div class="container" style="display: flex; position: relative; ">
+                <div class="left " style=" align-items: center; text-align: center; margin: 200px 0 0 100px;">
+                <div id="scrollspyHeading1">
+                  <h1 class="left1" style="font-size: 60px; font-family: Playfair Display, serif;
+                  font-optical-sizing: auto;
+                  font-weight: 700;
+                  font-style: normal;
+                  color: #484a4b;" >Flower <br>
+                    Arrangements</h1>
+                  <p class="h4 left1 l2" style="font-size: 30px; font-family: Montserrat Alternates, sans-serif;
+                  font-weight: bold;
+                  font-style: normal; margin: 40px 0 40px 0; color: #765a33;">
+                    • For all special occasions •
+                  </p>
+                  <p style="font-size: 25px; font-family: Josefin Slab, serif;
+                  font-optical-sizing: auto;
+                  font-weight: 400;
+                  font-style: normal; color: #765a33;" class="left1">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna .</p>
+                </div>
+                <div class="d-flex " style="justify-content: center; margin: 40px 0 0 0;"> 
+                <div class="button1">
+                  <form class="d-flex mx-3" role="search">
+                      
+                    <button class="left1 l1 btn btn-outline-dark bg-dark text-light fw-bold "style="
+                
+                    border-radius: 20px !important;
+                    " type="submit" >SIGN IN</button>
+                    
+                  </form>
+                </div>
+                
+                <div>
+                  <form>
+                  <p class="left1 " style="margin: 2px 0 0 0; color:blue"> <button class="l3 btn btn text-primary fw-bold" style="border: none;">READ MORE</button></p>
+                  </form>
+                </div>
+              </div>
+              </div>
+              </div>
+        </header>
+        <main>
+
+        <div class="container-fluid">
+          <div class="order">
+            <div class="container o1" style="display: flex; justify-content: space-around; text-align: center; color: white; padding: 90px 0 0 0;" >
+                <div>
+                    <p class="h1">3000+</p>
+                    <p>Packages Sold</p>
+                </div>
+                <div>
+                  <p class="h1">5000+</p>
+                  <p>Bouquet Sold</p>
+                </div>
+                <div>
+                  <p class="h1">7000+</p>
+                  <p>Happy Clients</p>
+                </div>
+                <div>
+                  <p class="h1">10+</p>
+                  <p>Years of Experience</p>
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="order2">
+          <div class="container ">
+            <div >
+              <div id="service" class="Product" style="text-align: center;"> 
+                <p class="h1" id="scrollspyHeading2">Our Top Products</p>
+                <p class="" style="color:#765a33; font-size: 25px;">Lorem ipsum dolor sit amet, consectetur.</p>
+              </div>
+            </div>
+          <div class="col">
+          <div class="row1  " style="display: flex; justify-content: space-between; margin: 125px 0 0 0; ">
+            <div class="card" style="width: 18rem;  height: 472px !important;   box-shadow: 15px 15px 20px #c8c6be;">
+              <img src="images/p1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="h4 " ><i class="bi bi-heart-fill " style="color: #c87e6b; margin: 0 0 0 230px; position: absolute;"></i></p>
+                <h5 class="card-title fs-4">Lorem impsun </h5>
+                <p class="card-text my-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
+                <a href="#" class="btn btn-secondary">READ MORE</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem; height: 472px !important;  box-shadow: 15px 15px 20px #c8c6be;">
+              <img src="images/p2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="h4 " ><i class="bi bi-heart-fill " style="color: #c87e6b; margin: 0 0 0 230px; position: absolute;"></i></p>
+                <h5 class="card-title fs-4">Lorem impsun </h5>
+                <p class="card-text my-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
+                <a href="#" class="btn btn-secondary">READ MORE</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem; height: 472px !important; box-shadow: 15px 15px 20px #c8c6be;">
+              <img src="images/p3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="h4 " ><i class="bi bi-heart-fill " style="color: #c87e6b; margin: 0 0 0 230px; position: absolute;"></i></p>
+                <h5 class="card-title fs-4">Lorem impsun </h5>
+                <p class="card-text my-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
+                <a href="#" class="btn btn-secondary">READ MORE</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem; height: 472px !important; box-shadow: 15px 15px 20px hsl(48, 8%, 76%);">
+              <img src="images/p4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="h4 " ><i class="bi bi-heart-fill " style="color: #c87e6b; margin: 0 0 0 230px; position: absolute;"></i></p>
+                <h5 class="card-title fs-4">Lorem impsun </h5>
+                <p class="card-text my-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br> do eiusmod tempor.</p>
+                <a href="#" class="btn btn-secondary">READ MORE</a>
+              </div>
+            </div>
+            
+          </div>
+          <div class=" d-flex" style="justify-content: center; margin: 40px 0 0 0;">
+          <a href=""><p class="display-4"style="color: #bcbcbc; margin: 0 30px;"><i class="bi bi-arrow-left-circle-fill"></i></p></a>
+          <a href=""><p class="display-4" style="margin: 0 30px; color: #454545"><i class="bi bi-arrow-right-circle-fill "></i></p></a>
+          </div>
+        </div>
+        
+          </div>
+        </div>
+        <div class="video">
+          <div class="container">
+            <div class="video-text">
+              <p class="h1">How we do it</p>
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="background4">
+          <div class="container mx-50 d-flex" style="text-align: center; ">
+
+            <div class="offer me-auto " style="align-items: center; ">
+              <div class="" style="
+              position: absolute;
+              margin: 30px 150px;
+          ">
+                <a href="#" class="btn btn-secondary btn-bg-tertiary $gray-800 button">SPECIAL OFFER</a>
+              </div>
+              <div>
+                <p style="
+                position: absolute;
+                margin: 70px 110px;
+            ">20%</p>
+              </div>
+             <div>
+                <p style="
+                position: absolute;
+                margin: 290px 140px;
+            ">Discount on your<br>
+                    first purchase</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="background6 d-flex" >
+            <div class="container d-flex" >
+                <div class="offer2 ms-auto " > 
+                   <p class="h1">We select the<br>
+                    best flowers</p>
+                    <p class="my-4">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-secondary btn-bg-tertiary  button">READ MORE</a>
+                </div>
+
+            </div>
+
+          </div>
+          <div class="background5 d-flex" style="align-items: center;">
+            <div class="container d-flex" >
+              <div class="offer3 me-auto " style="margin: 0 0 30px 0;" > 
+                 <p class="h1">We take care<br>
+                  of the details</p>
+                  <p class="my-4">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="#" class="btn btn-secondary btn-bg-tertiary  button">READ MORE</a>
+              </div>
+
+          </div>
+
+          </div>
+          <div class="background7 d-flex" >
+            <div class="container d-flex" >
+                <div class="offer3 ms-auto " > 
+                   <p class="h1">We select the<br>
+                    best flowers</p>
+                    <p class="my-4">Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-secondary btn-bg-tertiary  button">READ MORE</a>
+                </div>
+
+            </div>
+          </div>
+          <div class="background8">
+              <div class="container " style="text-align: center;">
+                <div class="form" id="about">
+                  <p class="h1">Subscribe to our<br>
+                    newsletter</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Name" style="
+                    height: 60px;
+                ">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mail" style="
+                    height: 60px;
+                ">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea type="text mx-3" class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Messages"></textarea>
+                    <div class="submit"><button type="button" class="btn btn-danger" style="
+                      padding: 15px 20px;
+                      border-radius: 50px;
+                      font-family: Montserrat Alternates, sans-serif;
+                      font-weight: bold;
+                      font-size: 18px;
+                  ">SEND MESSAGE</button></div>
+                  </div>
+                <div>
+
+              </div>
+          </div>
+ 
+        </main>
+        
+        <footer>
+            <!-- place footer here -->
+             <div class="background9">
+                <div class="container">
+                  <div class="foot d-flex" style="justify-content: space-between;padding: 170px 0;">
+                      <div id="contect">
+                          <p class="h1">About</p>
+                          <ul>
+                            <li style="padding: 27px 0 0 0;">History</li>
+                            <li style="padding: 27px 0 0 0;">Our Team</li>
+                            <li style="padding: 27px 0 0 0;">Mission Statement</li>
+                            <li style="padding: 27px 0 0 0;">Terms & Condition</li>
+                            <li style="padding: 27px 0 0 0;">Privacy Policy</li>
+                          </ul>
+                      </div>
+                      <div>
+                        <p class="h1" style=" margin: 0 280px; ">What we do</p>
+                        <ul style="margin: 0 280px;">
+                          <li style="padding: 27px 0 0 0;">News and stories</li>
+                          <li style="padding: 27px 0 0 0;">Publications</li>
+                          <li style="padding: 27px 0 0 0;">Take action</li>
+                          <li style="padding: 27px 0 0 0;">Recomendations</li>
+                          <li style="padding: 27px 0 0 0;"> Help</li>
+                        </ul>
+                        
+                        
+
+
+                        
+                        
+                       
+                        
+                      </div>  
+                      <div>
+                        <p class="h1">Your Copany</p>
+                        <ul>
+                          <li style="padding: 27px 0 0 0;">Halimun Street 25</li>
+                          <li style="padding: 27px 0 0 0;">Jakarta, City 1234</li>
+                          <li style="padding: 27px 0 0 0;">www.yourflowersite.com</li>
+                        </ul>
+                    </div>  
+                  <div>                  
+
+                </div>
+             </div>
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
